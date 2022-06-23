@@ -1,0 +1,19 @@
+require("dotenv").config();
+// Account credentials from which our contract will be deployed
+const MNEMONIC = process.env.MNEMONIC;
+
+module.exports = {
+  contracts_build_directory: "./src/build/contracts",
+  networks: {
+    development: {
+      host: "127.0.0.1",
+      port: 7545,
+      network_id: "*",
+    },
+  },
+  compilers: {
+    solc: {
+      version: "0.8.7"
+    }
+  }
+};
